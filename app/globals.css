@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pagani-black: #1a1a1a;
+  --color-pagani-gold: #D4AF37;
+  --color-bright-gold: #FFD700;
+  --color-carbon-gray: #2a2a2a;
+  --font-orbitron: var(--font-orbitron);
+  --font-rajdhani: var(--font-rajdhani);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-pagani-black);
+    color: white;
+    cursor: crosshair;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(26, 26, 26, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .text-glow-gold {
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+  }
+
+  .border-glow-gold {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  }
+
+  .scanlines {
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(0, 0, 0, 0.1) 50%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+  }
+
+  .gold-gradient {
+    background: linear-gradient(90deg, #D4AF37 0%, #FFD700 50%, #D4AF37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes scan {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100%); }
+}
+
+.scan-anim {
+  animation: scan 10s linear infinite;
+}
+
