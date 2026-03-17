@@ -6,7 +6,7 @@ export const carData = {
   },
   design: {
     title: "Design",
-    text: "Carbon Fiber Monocoque",
+    text: "Neo-Retro Scrambler",
   },
   engine: {
     title: "Engine",

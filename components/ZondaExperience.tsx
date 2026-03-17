@@ -8,7 +8,7 @@ interface Props {
 
 export default function ZondaExperience({ scrollYProgress }: Props) {
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    console.log("Scroll Progress:", latest);
+    // Scroll progress updated
   });
 
   const heroOpacity = useTransform(scrollYProgress, [0, 0.25, 0.33], [1, 1, 0]);
@@ -68,7 +68,7 @@ export default function ZondaExperience({ scrollYProgress }: Props) {
             {carData.design.title}
           </h2>
           <div className="h-[2px] w-64 bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto mb-6" />
-          <p className="font-rajdhani text-xl md:text-3xl text-white/90 tracking-[0.3em] font-light uppercase">
+          <p className="font-rajdhani text-xl md:text-3xl text-white/90 tracking-[0.3em] font-bold uppercase">
             {carData.design.text}
           </p>
         </div>

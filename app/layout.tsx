@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   description: "Scrollytelling Showcase for Honda CB350 RS",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,3 +34,4 @@ export default function RootLayout({
     </html>
   );
 }
+

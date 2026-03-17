@@ -63,10 +63,10 @@ export default function ZondaScrollCanvas({ scrollYProgress, totalFrames, imageF
 
     const imgWidth = img.naturalWidth;
     const imgHeight = img.naturalHeight;
-    const scale = Math.min(displayWidth / imgWidth, displayHeight / imgHeight);
+    const scale = Math.max(displayWidth / imgWidth, displayHeight / imgHeight);
 
     const x = (displayWidth - imgWidth * scale) / 2;
-    const y = (displayHeight - imgHeight * scale) / 2;
+    const y = (displayHeight - imgHeight * scale) / 2 + 40;
 
     ctx.drawImage(img, x, y, imgWidth * scale, imgHeight * scale);
 
