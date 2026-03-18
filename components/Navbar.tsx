@@ -14,9 +14,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 px-8 md:px-20 py-8 flex justify-between items-center ${
-        scrolled ? "glass border-b border-white/5 py-6" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 px-8 md:px-20 py-8 flex justify-between items-center ${scrolled ? "glass border-b border-white/5 py-6" : "bg-transparent"
+        }`}
     >
       <div className="relative group">
         <div className={`font-orbitron font-black text-3xl tracking-tighter uppercase transition-all duration-500 ${scrolled ? 'scale-90 text-pagani-gold' : 'scale-100 text-white'}`}>
@@ -24,10 +23,10 @@ export default function Navbar() {
         </div>
         <div className="absolute -bottom-1 left-0 w-0 h-[1px] bg-pagani-gold group-hover:w-full transition-all duration-300" />
       </div>
-      
+
       <div className="hidden md:flex gap-12 items-center">
         {['Heritage', 'Engineering', 'Custom', 'Inventory'].map((item) => (
-          <a key={item} href="#" className="font-rajdhani text-[10px] tracking-[0.4em] uppercase text-white/40 hover:text-pagani-gold transition-colors duration-300">
+          <a key={item} href="#" className="font-rajdhani text-[13px] tracking-[0.4em] uppercase text-white/80 hover:text-pagani-gold transition-colors duration-300">
             {item}
           </a>
         ))}
